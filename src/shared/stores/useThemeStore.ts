@@ -33,7 +33,7 @@ function applyToDOM(resolved: Resolved) {
 let media: MediaQueryList | null = null;
 let mediaListener: ((e: MediaQueryListEvent) => void) | null = null;
 
-const useThemeStore = create<ThemeState>((set, get) => ({
+const useThemeStore = create<ThemeState>((set) => ({
   mode: "system",
   resolved: "light",
 
@@ -45,7 +45,13 @@ const useThemeStore = create<ThemeState>((set, get) => ({
     // persist user choice
     try {
       localStorage.setItem("theme", mode);
-    } catch {}
+    } catch (err) {
+      if (err && typeof err === "object" && "message" in err) {
+        console.error((err as { message: string }).message);
+      } else {
+        console.error(err);
+      }
+    }
 
     // apply to DOM
     applyToDOM(nextResolved);
@@ -72,7 +78,13 @@ const useThemeStore = create<ThemeState>((set, get) => ({
     let saved: ThemeMode | null = null;
     try {
       saved = (localStorage.getItem("theme") as ThemeMode | null) || null;
-    } catch {}
+    } catch (err) {
+      if (err && typeof err === "object" && "message" in err) {
+        console.error((err as { message: string }).message);
+      } else {
+        console.error(err);
+      }
+    }
 
     const initialMode: ThemeMode = saved ?? "system";
     const initialResolved = resolveMode(initialMode);

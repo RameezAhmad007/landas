@@ -21,7 +21,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
 }) => {
   const disabled = useMemo(() => {
     return !(id.value.trim() && password.value.trim() && !password.showMessage);
-  }, [id, password, isChecked]);
+  }, [id, password]);
 
   return (
     <form className="mt-[120px] w-full">
