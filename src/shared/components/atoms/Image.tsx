@@ -1,3 +1,4 @@
+import classNameMerge from "@shared/utils/classNameMerge";
 import React from "react";
 
 interface ImageProps {
@@ -8,7 +9,11 @@ interface ImageProps {
 
 const Image: React.FC<ImageProps> = ({ src, alt, className }) => {
   return (
-    <img src={src} alt={alt} className={className || "w-full object-contain"} />
+    <img
+      src={src}
+      alt={alt}
+      className={classNameMerge("w-full object-contain", className)}
+    />
   );
 };
 

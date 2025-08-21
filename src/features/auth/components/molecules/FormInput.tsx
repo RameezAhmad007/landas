@@ -1,6 +1,6 @@
 import React from "react";
 import Label from "@shared/components/atoms/Label";
-import Input from "@shared/components/atoms/Input";
+import Input from "@shared/components/atoms/inputs/Input";
 import Text from "@shared/components/atoms/Text";
 
 interface FormInputProps {

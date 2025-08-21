@@ -1,7 +1,7 @@
 import React from "react";
 import classNameMerge from "@shared/utils/classNameMerge";
 import Label from "@shared/components/atoms/Label";
-import Input from "@shared/components/atoms/Input";
+import Input from "@shared/components/atoms/inputs/Input";
 import Text from "@shared/components/atoms/Text";
 import BasicButton from "@shared/components/atoms/buttons/BasicButton";
 import Icon from "@shared/components/atoms/Icon";
@@ -17,6 +17,7 @@ interface PasswordInputProps {
   showMessage?: boolean;
   minLength?: number;
   maxLength?: number;
+  className?: string;
 }
 
 const PasswordInput: React.FC<PasswordInputProps> = ({
@@ -30,14 +31,20 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   showMessage,
   minLength,
   maxLength,
+  className,
 }) => {
   return (
-    <div className="flex flex-col gap-2.5 md:gap-5 md:items-center md:flex-row mt-5 mb-[30px]">
+    <div
+      className={classNameMerge(
+        "flex flex-col gap-2.5 md:gap-5 md:items-center md:flex-row",
+        className
+      )}
+    >
       <Label htmlFor={id}>{label}</Label>
       <div className="self-stretch grow">
         <div
           className={classNameMerge(
-            "flex items-center gap-2 w-full focus-within:outline-2 focus-within:outline-amber-400 px-5 py-[10px] h-[56px] bg-[#FAFAFA] dark:bg-gray-800  rounded-[10px]",
+            "flex items-center gap-2 w-full focus-within:outline-2 focus-within:outline-amber-400 px-5 py-[10px] h-[42px] md:h-[56px] bg-[#FAFAFA] dark:bg-gray-800  rounded-[10px]",
             error && "outline-2 outline-red-500 bg-red-100 dark:bg-red-100"
           )}
         >

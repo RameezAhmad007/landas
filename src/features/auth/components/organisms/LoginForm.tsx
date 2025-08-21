@@ -24,7 +24,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   }, [id, password]);
 
   return (
-    <form className="mt-[120px] w-full">
+    <form className="mt-[60px] sm:mt-[120px] w-full ">
       <FormInput
         id="id"
         label="아이디"
@@ -55,6 +55,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         showMessage={password.showMessage}
         minLength={8}
         maxLength={16}
+        className="mt-7 sm:mt-5 mb-12 sm:mb-[30px]"
       />
       <div className="flex items-center justify-between">
         <CheckboxGroup
@@ -66,13 +67,13 @@ const LoginForm: React.FC<LoginFormProps> = ({
       </div>
       <BasicButton
         isDisabled={disabled}
-        className="w-full flex items-center justify-center p-5 h-[72px] bg-amber-400 disabled:bg-[#E5E5E5] rounded-[10px] font-medium text-xl disabled:text-[#B2B2B2] text-black mt-[60px] mb-5"
+        className="w-full flex items-center justify-center p-5 h-[52px] sm:h-[72px] bg-amber-400 disabled:bg-[#E5E5E5] rounded-[10px] font-normal text-base  md:font-medium md:text-xl disabled:text-[#B2B2B2] text-black mt-[60px] mb-2.5 sm:mb-5"
         onClick={onLogin}
       >
         로그인
       </BasicButton>
       <BasicButton
-        className="w-full flex items-center justify-center p-5 h-[72px] bg-white rounded-[10px] font-medium text-xl text-[#666666] border border-[#D9D9D9]"
+        className="w-full flex items-center justify-center p-5 h-[52px] sm:h-[72px] bg-white rounded-[10px] font-normal text-base md:font-medium md:text-xl text-[#666666] border border-[#D9D9D9]"
         onClick={onJoin}
       >
         회원가입

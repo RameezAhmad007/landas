@@ -12,6 +12,12 @@
 @utility font-zen {
   font-family: "Zen Dots", sans-serif;
 }
+
+@theme {
+  /* 375px = 23.4375rem; keep units consistent with defaults (rem) */
+  --breakpoint-xs: 23.4375rem;
+}
+
 @layer utilities {
   /* For Edge/IE */
   input[type="password"]::-ms-reveal,

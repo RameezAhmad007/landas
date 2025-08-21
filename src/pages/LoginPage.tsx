@@ -85,7 +85,7 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center gap-[30px] px-5 py-14 bg-[#F8F6EE] dark:bg-gray-900 darl:md-bg-none md:bg-[radial-gradient(22.27%_29.38%_at_31.69%_30.98%,rgba(255,196,11,0.1)_0%,rgba(255,196,11,0)_100%),radial-gradient(30.89%_38.32%_at_65.1%_72.41%,rgba(255,196,11,0.05)_0%,rgba(255,196,11,0)_100%),linear-gradient(180deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)] bg-[radial-gradient(39.18%_19.06%_at_28.53%_20.39%,rgba(255,196,11,0.1)_0%,rgba(255,196,11,0)_100%),radial-gradient(51.67%_28.68%_at_54.5%_52.27%,rgba(255,196,11,0.05)_0%,rgba(255,196,11,0)_100%),linear-gradient(180deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]">
+    <div className="min-h-screen w-full md:flex md:flex-col md:items-center md:justify-center gap-[30px] px-5 py-14 bg-[#F8F6EE] dark:bg-gray-900 darl:md-bg-none md:bg-[radial-gradient(22.27%_29.38%_at_31.69%_30.98%,rgba(255,196,11,0.1)_0%,rgba(255,196,11,0)_100%),radial-gradient(30.89%_38.32%_at_65.1%_72.41%,rgba(255,196,11,0.05)_0%,rgba(255,196,11,0)_100%),linear-gradient(180deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)] bg-[radial-gradient(39.18%_19.06%_at_28.53%_20.39%,rgba(255,196,11,0.1)_0%,rgba(255,196,11,0)_100%),radial-gradient(51.67%_28.68%_at_54.5%_52.27%,rgba(255,196,11,0.05)_0%,rgba(255,196,11,0)_100%),linear-gradient(180deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]">
       <LoginCard
         id={id}
         setId={setId}
@@ -100,7 +100,8 @@ const LoginPage: React.FC = () => {
         onLogin={loginHandler}
         onJoin={joinMemberHandler}
       />
-      <Text className="text-[14px] text-[#808080] text-center">
+
+      <Text className="font-normal text-[14px] text-[#808080] text-center mt-[30px] md:mt-0">
         Copyright © WWW.ldsb2bmall.com All right reserved
       </Text>
     </div>

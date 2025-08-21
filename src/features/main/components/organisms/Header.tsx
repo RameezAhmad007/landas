@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             className="text-white dark:text-gray-200"
           />
           <UserActions className="hidden lg:flex" />
-          <div className="absolute right-0 flex lg:hidden items-center gap-[11px] w-[88px] shrink-0 self-end z-10">
+          <div className="xs:absolute xs:right-0 flex lg:hidden items-center gap-[11px] w-[88px] shrink-0 self-end z-10">
             <IconButton iconType="cart" ariaLabel="Cart" />
             <IconButton iconType="search" ariaLabel="Search" />
             <IconButton

@@ -2,6 +2,7 @@ import React from "react";
 import ProductCard from "../molecules/ProductCard";
 import SectionTitle from "../molecules/SectionTitle";
 import { type Product } from "@features/main/types/types";
+import classNameMerge from "@shared/utils/classNameMerge";
 
 interface ProductSectionProps {
   title: React.ReactNode;
@@ -18,10 +19,13 @@ const ProductSection: React.FC<ProductSectionProps> = ({
 }) => {
   return (
     <section
-      className={className || "px-5 pt-[60px] lg:px-[215px] lg:pt-[152px] bg-white dark:bg-gray-900"}
+      className={classNameMerge(
+        "px-5 pt-[60px] lg:px-[215px] lg:pt-[152px] bg-white dark:bg-gray-900",
+        className
+      )}
     >
       <SectionTitle title={title} subtitle={subtitle} />
-      <div className="mt-[60px] grid grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-5">
+      <div className="mt-[60px] grid grid-cols-1 xs:grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-5">
         {products.map((product) => (
           <ProductCard
             key={product.id}

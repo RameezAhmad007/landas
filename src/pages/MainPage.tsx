@@ -158,6 +158,7 @@ const Main: React.FC = () => {
           title="상품진열이 타이틀이 들어갑니다."
           subtitle="부타이틀이 필요할 경우 텍스트가 들어갑니다."
           products={products}
+          className="lg:pt-[120px]"
         />
         <PromoSection
           title1="B2B 전문 의류 쇼핑몰!"
